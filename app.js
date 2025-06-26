@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGO_URL).then(Result=>{
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
     app.use('/user',userRouter);
-    app.listen(process.env.port,()=>{
+    app.listen(process.env.PORT,()=>{
         console.log("server started ......");
     });
 }).catch(Err=>{
