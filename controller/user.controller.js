@@ -175,7 +175,7 @@ const sendEmail = (email,name) => {
             subject: 'Account Verification',
             html: `<h4>Dear ${name}</h4>
             <p>Thank you for registration. To verify account please click on below button</p>
-            <form method="post" action="http://localhost:3000/user/verification">
+            <form method="post" action="https://backendapi-mdb.onrender.com/user/verification">
               <input type="hidden" name="email" value="${email}"/>
               <button type="submit" style="background-color: dark; color:white; width:200px; border: none; border: 2px solid grey; border-radius:10px;">Verifyaccount</button>
             </form>
