@@ -29,7 +29,7 @@ return response.status(201).json({message:"user create successfull",user:result}
 
     }catch(error){
         console.log(error);
-        return response.status(500).json({message:"Internal server Error:"})
+        return response.status(500).json({message:"Internal server Error:"});
     }
 
     }
@@ -156,10 +156,7 @@ async update(request,response){
 
   }
 
-    // <form method="post" action="https://backendapi-mdb.onrender.com/user/verification">
-            //   <input type="hidden" name="email" value="${email}"/>
-            //   <button type="submit" style="background-color: dark; color:white; width:200px; border: none; border: 2px solid grey; border-radius:10px;">Verifyaccount</button>
-            // </form>
+
 
   ///////////////////////send Email concept ok//////////////////////////////
 const sendEmail = (email,name) => {
@@ -179,10 +176,10 @@ const sendEmail = (email,name) => {
             html: `<h4>Dear ${name}</h4>
             <p>Thank you for registration. To verify account please click on below button</p>
         
-            <a href="https://backendapi-mdb.onrender.com/user/verify?token=${token}"
-   style="padding:10px 20px; background-color:#28a745; color:white; text-decoration:none; border-radius:5px;">
-   Verify Account
-</a>
+            <form method="post" action="https://backendapi-mdb.onrender.com/user/verification">
+              <input type="hidden" name="email" value="${email}"/>
+              <button type="submit" style="background-color: green; color:white; width:200px; border: none; border: 2px solid red; border-radius:10px;">Verifyaccount</button>
+            </form>
             <p>
                <h6>Thank you</h6>
                Backend Api Team.
