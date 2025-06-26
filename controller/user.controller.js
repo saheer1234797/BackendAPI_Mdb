@@ -29,7 +29,7 @@ return response.status(201).json({message:"user create successfull",user:result}
 
     }catch(error){
         console.log(error);
-        return response.status(500).json({message:"Internal server Error:"});
+        return response.status(500).json({message:"Internal server Error:"})
     }
 
     }
@@ -176,9 +176,9 @@ const sendEmail = (email,name) => {
             html: `<h4>Dear ${name}</h4>
             <p>Thank you for registration. To verify account please click on below button</p>
         
-            <form method="post" action="https://backendapi-mdb.onrender.com/user/verification">
+    <form method="post" action="https://backendapi-mdb.onrender.com/user/verification">
               <input type="hidden" name="email" value="${email}"/>
-              <button type="submit" style="background-color: green; color:white; width:200px; border: none; border: 2px solid red; border-radius:10px;">Verifyaccount</button>
+              <button type="submit" style="background-color: dark; color:white; width:200px; border: none; border: 2px solid grey; border-radius:10px;">Verifyaccount</button>
             </form>
             <p>
                <h6>Thank you</h6>
