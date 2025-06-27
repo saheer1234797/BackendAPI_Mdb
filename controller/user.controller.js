@@ -29,7 +29,7 @@ return response.status(201).json({message:"user create successfull",user:result}
 
     }catch(error){
         console.log(error);
-        return response.status(500).json({message:"Internal server Error:"})
+        return response.status(500).json({message:"Internal server Error:",error});
     }
 
     }
